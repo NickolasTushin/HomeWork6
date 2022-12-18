@@ -13,9 +13,11 @@ Console.Write("Введите через пробел координаты ве�
 
 double[] array = Console.ReadLine().Split(" ").Select(x => double.Parse(x)).ToArray();
 
-double AB = Math.Sqrt(Math.Pow(array[0] - array[2], 2) + Math.Pow(array[1] - array[3], 2));
-double BC = Math.Sqrt(Math.Pow(array[2] - array[4], 2) + Math.Pow(array[3] - array[5], 2));
-double CA = Math.Sqrt(Math.Pow(array[0] - array[4], 2) + Math.Pow(array[1] - array[5], 2));;
-double p = (AB + BC + CA) / 2;
-double s = Math.Sqrt(p * (p - AB) * (p - BC) * (p - CA));
-Console.WriteLine($"Площадь треугольника: {Math.Round(s, 2)}");
+double a = Math.Sqrt(Math.Pow(array[0] - array[2], 2) + Math.Pow(array[1] - array[3], 2));
+double b = Math.Sqrt(Math.Pow(array[2] - array[4], 2) + Math.Pow(array[3] - array[5], 2));
+double c = Math.Sqrt(Math.Pow(array[0] - array[4], 2) + Math.Pow(array[1] - array[5], 2));;
+double p = (a + b + c) / 2;
+double s = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+
+
+Console.WriteLine($"Площадь треугольника  =  {Math.Round(s, 2)}");
